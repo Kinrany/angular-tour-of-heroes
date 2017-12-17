@@ -1,15 +1,10 @@
-<div *ngIf="selectedHero">
-    <h2>{{ selectedHero.name | uppercase }} Details</h2>
-    <div>
-        <span>id: </span>{{selectedHero.id}}
-    </div>
-    <div>
-        <label>
-            name:
-            <input [(ngModel)]="selectedHero.name" placeholder="name" />
-        </label>
-    </div>
+<div *ngIf="selectedHero; else notSelected">
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 </div>
+<ng-template #notSelected>
+    <h2>Hero Details</h2>
+    Select a hero to view details
+</ng-template>
 <div>
     <h2>My Heroes</h2>
     <ul class="heroes">
