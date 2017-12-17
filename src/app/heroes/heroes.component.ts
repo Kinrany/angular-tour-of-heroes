@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    this.name = 'Windstorm';
+  }
 
   ngOnInit() {
   }
+
+  name: string;
 
 }
