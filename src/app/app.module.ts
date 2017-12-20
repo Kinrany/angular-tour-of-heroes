@@ -10,13 +10,15 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 
 import { HeroService } from './hero.service';
 import { MessagesService } from './messages.service';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    HeroListComponent
+    HeroListComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
