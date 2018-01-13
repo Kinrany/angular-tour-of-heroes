@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
   template: `
     <h1 class="italic"> {{title}} </h1>
     <app-heroes></app-heroes>
+    <app-messages></app-messages>
   `
 })
 export class AppComponent {
