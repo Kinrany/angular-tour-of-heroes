@@ -1,8 +1,2 @@
-<div *ngIf="selectedHero; else notSelected">
-    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
-</div>
-<ng-template #notSelected>
-    <h2>Hero Details</h2>
-    Select a hero to view details
-</ng-template>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 <app-hero-list [heroes]="heroes" (select)="onSelect($event)"></app-hero-list>
