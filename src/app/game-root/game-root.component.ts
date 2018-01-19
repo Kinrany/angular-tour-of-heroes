@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GameUiElement } from '../game-ui-element';
+import { GameUiElementButton as UiButton } from '../game-ui-element-button';
+import { GameUiElementText as UiText } from '../game-ui-element-text';
+
 @Component({
   selector: 'game-root',
   templateUrl: './game-root.component.html',
@@ -12,15 +16,15 @@ export class GameRootComponent implements OnInit {
   ngOnInit() {
   }
 
-  ui_elements = [
-    {
-      type: "button",
-      label: "this is a button",
-      click: function() { alert("someone clicked the button"); }
-    },
-    {
-      type: "text",
-      text: "this is a text"
-    }
+  ui_elements: GameUiElement[] = [
+    new UiText("hello world"),
+    new UiButton("spook", () => { alert("boo"); return; }),
+    new UiButton("knock-knock", () => {
+      this.addText("who's there?");
+    })
   ];
+
+  addText(text: string): void {
+    this.ui_elements.push(new UiText(text));
+  }
 }

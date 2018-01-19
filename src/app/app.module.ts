@@ -14,6 +14,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { GameUiComponent } from './game-ui/game-ui.component';
 import { GameRootComponent } from './game-root/game-root.component';
 import { GameButtonComponent } from './game-button/game-button.component';
+import { GameTextComponent } from './game-text/game-text.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GameButtonComponent } from './game-button/game-button.component';
     MessagesComponent,
     GameUiComponent,
     GameRootComponent,
-    GameButtonComponent
+    GameButtonComponent,
+    GameTextComponent
   ],
   imports: [
     BrowserModule,
