@@ -21,10 +21,17 @@ export class GameRootComponent implements OnInit {
     new UiButton("spook", () => { alert("boo"); return; }),
     new UiButton("knock-knock", () => {
       this.addText("who's there?");
+    }),
+    new UiButton("remove first", () => {
+      this.removeFirst();
     })
   ];
 
   addText(text: string): void {
     this.ui_elements.push(new UiText(text));
+  }
+
+  removeFirst() : void {
+    this.ui_elements.shift();
   }
 }
