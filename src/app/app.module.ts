@@ -12,6 +12,7 @@ import { HeroService } from './hero.service';
 import { MessagesService } from './messages.service';
 import { MessagesComponent } from './messages/messages.component';
 import { GameUiComponent } from './game-ui/game-ui.component';
+import { GameRootComponent } from './game-root/game-root.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GameUiComponent } from './game-ui/game-ui.component';
     HeroDetailComponent,
     HeroListComponent,
     MessagesComponent,
-    GameUiComponent
+    GameUiComponent,
+    GameRootComponent
   ],
   imports: [
     BrowserModule,

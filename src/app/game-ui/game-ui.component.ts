@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-game-ui',
+  selector: 'game-ui',
   templateUrl: './game-ui.component.html',
   styleUrls: ['./game-ui.component.css']
 })
@@ -12,15 +12,5 @@ export class GameUiComponent implements OnInit {
   ngOnInit() {
   }
 
-  elements = [
-    {
-      type: "button",
-      label: "this is a button"
-    },
-    {
-      type: "text",
-      text: "this is a text"
-    }
-  ];
-
+  @Input() elements: Array<{ type: string }>;
 }

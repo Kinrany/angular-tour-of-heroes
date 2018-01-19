@@ -1,6 +1,6 @@
 <div *ngFor="let element of elements" >
-  <p [ngSwitch]="element.type">
-    <button *ngSwitchCase="button" (click)="element.click()">{{element.label}}</button>
-    <span *ngSwitchCase="text">{{element.text}}</span>
-  </p>
+  <div [ngSwitch]="element.type">
+    <button *ngSwitchCase="'button'" (click)="element.click()">{{element.label}}</button>
+    <p *ngSwitchCase="'text'">{{element.text}}</p>
+  </div>
 </div> 
