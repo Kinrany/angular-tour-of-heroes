@@ -13,6 +13,7 @@ import { MessagesService } from './messages.service';
 import { MessagesComponent } from './messages/messages.component';
 import { GameUiComponent } from './game-ui/game-ui.component';
 import { GameRootComponent } from './game-root/game-root.component';
+import { GameButtonComponent } from './game-button/game-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GameRootComponent } from './game-root/game-root.component';
     HeroListComponent,
     MessagesComponent,
     GameUiComponent,
-    GameRootComponent
+    GameRootComponent,
+    GameButtonComponent
   ],
   imports: [
     BrowserModule,
