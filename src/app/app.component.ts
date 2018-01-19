@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     }
   `],
   template: `
-    <game-root></game-root>
+    <game-ui></game-ui>
     <hr>
     <h1 class="italic"> {{title}} </h1>
     <app-heroes></app-heroes>

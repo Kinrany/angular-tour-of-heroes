@@ -1,19 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import { GameUiElement } from '../game-ui-element';
-import { GameUiElementButton as UiButton } from '../game-ui-element-button';
-import { GameUiElementText as UiText } from '../game-ui-element-text';
+import { GameUiElement } from './game-ui-element';
+import { GameUiElementButton as UiButton } from './game-ui-element-button';
+import { GameUiElementText as UiText } from './game-ui-element-text';
 
-@Component({
-  selector: 'game-root',
-  templateUrl: './game-root.component.html',
-  styleUrls: ['./game-root.component.css']
-})
-export class GameRootComponent implements OnInit {
+@Injectable()
+export class GameStateService {
 
   constructor() { }
 
-  ngOnInit() {
+  getUiElements() : GameUiElement[] {
+    return this.ui_elements;
   }
 
   ui_elements: GameUiElement[] = [
@@ -26,7 +23,7 @@ export class GameRootComponent implements OnInit {
       this.removeFirst();
     })
   ];
-
+  
   addText(text: string): void {
     this.ui_elements.push(new UiText(text));
   }

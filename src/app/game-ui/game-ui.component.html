@@ -1,4 +1,4 @@
-<div *ngFor="let element of elements" >
+<div *ngFor="let element of gameStateService.getUiElements()" >
   <div [ngSwitch]="element.type">
     <game-button *ngSwitchCase="'button'" [element]="element"></game-button>
     <game-text *ngSwitchCase="'text'" [element]="element"></game-text>

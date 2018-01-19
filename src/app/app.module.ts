@@ -12,9 +12,9 @@ import { HeroService } from './hero.service';
 import { MessagesService } from './messages.service';
 import { MessagesComponent } from './messages/messages.component';
 import { GameUiComponent } from './game-ui/game-ui.component';
-import { GameRootComponent } from './game-root/game-root.component';
 import { GameButtonComponent } from './game-button/game-button.component';
 import { GameTextComponent } from './game-text/game-text.component';
+import { GameStateService } from './game-state.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,6 @@ import { GameTextComponent } from './game-text/game-text.component';
     HeroListComponent,
     MessagesComponent,
     GameUiComponent,
-    GameRootComponent,
     GameButtonComponent,
     GameTextComponent
   ],
@@ -32,7 +31,7 @@ import { GameTextComponent } from './game-text/game-text.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [HeroService, MessagesService],
+  providers: [HeroService, MessagesService, GameStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

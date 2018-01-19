@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { GameStateService } from '../game-state.service';
 
 @Component({
   selector: 'game-ui',
@@ -7,10 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GameUiComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gameStateService: GameStateService) { }
 
   ngOnInit() {
   }
-
-  @Input() elements: Array<{ type: string }>;
+  
 }
