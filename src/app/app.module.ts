@@ -11,6 +11,7 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroService } from './hero.service';
 import { MessagesService } from './messages.service';
 import { MessagesComponent } from './messages/messages.component';
+import { GameUiComponent } from './game-ui/game-ui.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MessagesComponent } from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     HeroListComponent,
-    MessagesComponent
+    MessagesComponent,
+    GameUiComponent
   ],
   imports: [
     BrowserModule,
